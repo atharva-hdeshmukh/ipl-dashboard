@@ -2,12 +2,9 @@ package io.javabrains.ipldashboard.data;
 
 import io.javabrains.*;
 import io.javabrains.ipldashboard.data.model.Match;
-import net.bytebuddy.asm.Advice.ArgumentHandler.Factory;
-
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,8 +19,6 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, Match> {
     public Match process(final MatchInput matchInput) throws Exception {
 
         Match match = new Match();
-
-        
         
         DateTimeFormatter f = DateTimeFormatter.ofPattern("dd-M-yyyy");
         //System.out(Long.parseLong(matchInput.getId()));
